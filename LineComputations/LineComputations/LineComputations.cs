@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -36,12 +37,25 @@ namespace LineComputations
             double LengthOfLineOne = Math.Sqrt((xTwo - xOne)*(xTwo - xOne)+(yTwo - yOne)*(yTwo - yOne));
             Console.WriteLine("Length of Line1 is:" + LengthOfLineOne);
             Console.WriteLine("-------------------------------------");
+            
             //Calculate the length of Line2
-            double LengthOfLineTwo = Math.Sqrt((xFour - xThree) * (xFour - xThree) + (yFour - yThree) + (yFour - xThree));
+            double LengthOfLineTwo = Math.Sqrt((xFour - xThree) * (xFour - xThree) + (yFour - yThree) * (yFour - yThree));
             Console.WriteLine("Length of Line2 is:" + LengthOfLineTwo);
+
+            //Check equality of two lines
+           
+                if (LengthOfLineOne.Equals(LengthOfLineTwo))
+                {
+                    Console.WriteLine(" Check Equality:-Length of Line1 and Line2 are Equal");
+                }
+                else
+                {
+                    Console.WriteLine("Check Equality:-Length of Line1 and Line2 are UnEqual");
+                }
+            }
 
 
 
         }
     }
-}
+
