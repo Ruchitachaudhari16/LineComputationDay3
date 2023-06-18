@@ -43,15 +43,20 @@ namespace LineComputations
             Console.WriteLine("Length of Line2 is:" + LengthOfLineTwo);
 
             //Check equality of two lines
-           
-                if (LengthOfLineOne.Equals(LengthOfLineTwo))
-                {
-                    Console.WriteLine(" Check Equality:-Length of Line1 and Line2 are Equal");
-                }
-                else
-                {
-                    Console.WriteLine("Check Equality:-Length of Line1 and Line2 are UnEqual");
-                }
+
+            if (LengthOfLineOne.Equals(LengthOfLineTwo))
+            {
+                Console.WriteLine("Length of Line1 and Line2 are Equal");
+            }
+            else if ((LengthOfLineOne) > (LengthOfLineTwo))
+            {
+                Console.WriteLine("Length of Line1 is greater than Line2");
+            }
+            else
+            {
+                Console.WriteLine("Length of Line2 is greater than Line1");
+            }
+
             }
 
 
